@@ -18,6 +18,24 @@ func (t *AppTest) TestThatIndexPageWorks() {
 	t.AssertContentType("text/html; charset=utf-8")
 }
 
+func (t *AppTest) TestInfoPageWorks() {
+	t.Get("/info")
+	t.AssertOk()
+	t.AssertContentType("text/html; charset=utf-8")
+}
+
+func (t *AppTest) TestPluginIndexPageWorks() {
+	t.Get("/plugins/")
+	t.AssertOk()
+	t.AssertContentType("text/html; charset=utf-8")
+}
+
+func (t *AppTest) TestPluginSearchPageWorks() {
+	t.Get("/plugins/search")
+	t.AssertOk()
+	t.AssertContentType("text/html; charset=utf-8")
+}
+
 func (t *AppTest) After() {
 	println("Tear down")
 }

@@ -8,6 +8,17 @@ module:testrunner
 
 
 GET     /                                       App.Index
+GET     /info                                   App.Info
+GET     /plugins                                Plugin.Index
+GET     /plugins/search                         Plugin.Search
+GET     /plugins/:id                            Plugin.Product
+GET     /login                                  Auth.Index
+POST    /login                                  Auth.Login
+GET     /logout                                 Auth.Logout
+GET     /register                               Auth.RegisterIndex
+POST    /register                               Auth.Register
+GET     /mypage                                 MyPage.Index
+GET     /mypage/config                          MyPage.Config
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

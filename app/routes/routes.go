@@ -15,6 +15,32 @@ func (_ tApp) Index(
 	return revel.MainRouter.Reverse("App.Index", args).URL
 }
 
+func (_ tApp) Info(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.Info", args).URL
+}
+
+
+type tPlugin struct {}
+var Plugin tPlugin
+
+
+func (_ tPlugin) Index(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Plugin.Index", args).URL
+}
+
+func (_ tPlugin) Search(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("Plugin.Search", args).URL
+}
+
 
 type tStatic struct {}
 var Static tStatic
